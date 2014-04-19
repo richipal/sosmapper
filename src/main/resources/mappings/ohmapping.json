@@ -1,0 +1,20 @@
+{
+    "charternumber":"corpNumber",
+    "name":"corpName",
+    "status":"corpStatus",
+    "type":"corpType",
+    "effective_date":"incorporationDate",
+    "address1":"mailAddress1",
+    "address2":"mailAddress2",
+    "citytownshipvillage":"mailAddressCity",
+    "state":"mailAddressStateCountry",
+    "address_zip":"mailAddressZipCode",
+    "agent_contactname":"agentName",
+    "address1":"agentAddress1",
+    "address2":"agentAddress2",
+    "address_city":"agentAddressCity",
+    "address_state":"agentAddressStateCounty",
+    "address_zip":"agentAddressZipCode",
+    "county":"stateOrForeignCountry",
+    "serialid":"serialId"
+}

@@ -1,0 +1,34 @@
+{
+    "cor_number":"corpNumber",
+    "cor_name":"corpName",
+    "cor_status":"corpStatus",
+    "cor_filing_type":"corpType",
+
+    "corporation_tax_base":"corpTaxBase",
+    "corporation_classification":"corpClassification",
+    "cor_file_date":"incorporationDate",
+    "cor_fei_number":"feiNumber",
+    "term_expiration_date":"termExpDate",
+    "ftb_suspension_status_code":"ftbSuspensionStatusCode",
+    "ftb_suspension_date":"ftbSuspensionDate",
+    "s_o_file_number":"soFileNumber",
+    "s_o_file_date":"soFileDate",
+    "c_o_name":"coName",
+
+    "cor_mail_add_1":"mailAddress1",
+    "cor_mail_add_2":"mailAddress2",
+    "cor_mail_add_city":"mailAddressCity",
+    "cor_mail_add_state":"mailAddressStateCountry",
+    "cor_mail_add_zip":"mailAddressZipCode",
+    "cor_mail_add_country":"mailAddressZipCode",
+
+
+    "ra_name":"agentName",
+    "ra_add_1":"agentAddress1",
+    "ra_add_2":"agentAddress2",
+    "ra_city":"agentAddressCity",
+    "ra_state":"agentAddressStateCounty",
+    "ra_zip5":"agentAddressZipCode",
+    "state_country":"stateOrForeignCountry",
+    "serialid":"serialId"
+}

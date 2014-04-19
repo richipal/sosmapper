@@ -1,0 +1,10 @@
+transaction_julian_date,corporation_number,incorporation_date,corporation_status,corporation_type,corporation_tax_base,corporation_classification,term_expiration_date,ftb_suspension_status_code,ftb_suspension_date,s_o_file_number,s_o_file_date,corporation_name,c_o_name,mail_address_1,mail_address_2,mail_address_city,mail_address_state_county,mail_address_zipcode,ceo_name,ceo_address_1,ceo_address_2,ceo_address_city,ceo_address_state_county,ceo_address_zipcode,agent_name,agent_address_1,agent_address_2,agent_address_city,agent_address_state_county,agent_address_zipcode,state_or_foreign_country,serialid
+89102,00232303,1948-11-23,Suspended,Articles of Incorporation,Stock,,,Suspended,1964-11-02,,,VISTA GRANDE MUTUAL WATER COMPANY,,,,,,,,,,,,,,,,,,,,1
+95011,00411305,1961-03-22,Dissolved,Articles of Incorporation,Stock,,,,,,,"KECO GYPSUM CO., INC.",,,,,,,,,,,,,,,,,,,,2
+89209,00370521,1959-03-09,Suspended,Articles of Incorporation,Stock,,,Suspended,1965-07-01,,,VINYL-LINE PAINT CO.,,,,,,,,,,,,,,,,,,,,3
+02120,00177708,1938-11-22,Dissolved,Articles of Incorporation,Stock,,,,,,,SHAFFER HOLDING CO.,,,,,,,,,,,,,,,,,,,,4
+,00103661,1923-04-28,Surrendered,Statement & Designation By Foreign Corporation,Stock,,,,,,,THE NATIONAL REINSURANCE CORPORATION,,,,,,,,,,,,,,,,,,,NEW YORK,5
+91008,00200832,1945-12-07,Suspended,Articles of Incorporation,Stock,,,Suspended,1978-09-01,,,ALCATRAZ ROOFING COMPANY,,,,,,,,,,,,,,,,,,,,6
+,00200839,1945-12-07,Suspended,Articles of Incorporation,Non-Stock (Nonprofit),Unclassified,,Suspended,1972-04-03,,,THE HAIR STYLIST GUILD,,,,,,,,,,,,,,,,,,,,7
+,00209235,1946-08-28,Surrendered,Statement & Designation By Foreign Corporation,Stock,,,,,,,MWA COMPANY,,,,,,,,,,,,,,,,,,,DELAWARE,8
+,00209454,1946-09-04,Suspended,Articles of Incorporation,Non-Stock (Nonprofit),Unclassified,,Suspended,1972-04-03,,,CHICO MOTORCYCLE CLUB,,,,,,,,,,,,,,,,,,,,9

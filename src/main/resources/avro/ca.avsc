@@ -1,0 +1,43 @@
+{
+    "namespace": "com.richipal.ondeck.schema.avro",
+    "type": "record",
+    "name": "CAMapping",
+    "fields" : [
+
+        {"name": "transaction_julian_date", "type": ["null","string"], "default":null},
+        {"name": "corporation_number", "type": ["null","string"], "default":null},
+        {"name": "incorporation_date", "type": ["null","string"], "default":null},
+        {"name": "corporation_status", "type": ["null","string"], "default":null},
+        {"name": "corporation_type", "type": ["null","string"], "default":null},
+        {"name": "corporation_tax_base", "type": ["null","string"], "default":null},
+        {"name": "corporation_classification", "type": ["null","string"], "default":null},
+        {"name": "term_expiration_date", "type": ["null","string"], "default":null},
+        {"name": "ftb_suspension_status_code", "type": ["null","string"], "default":null},
+        {"name": "ftb_suspension_date", "type": ["null","string"], "default":null},
+        {"name": "s_o_file_number", "type": ["null","string"], "default":null},
+        {"name": "s_o_file_date", "type": ["null","string"], "default":null},
+        {"name": "corporation_name", "type": ["null","string"], "default":null},
+        {"name": "c_o_name", "type": ["null","string"], "default":null},
+        {"name": "mail_address_1", "type": ["null","string"], "default":null},
+        {"name": "mail_address_2", "type": ["null","string"], "default":null},
+        {"name": "mail_address_city", "type": ["null","string"], "default":null},
+        {"name": "mail_address_state_county", "type": ["null","string"], "default":null},
+        {"name": "mail_address_zipcode", "type": ["null","string"], "default":null},
+        {"name": "ceo_name", "type": ["null","string"], "default":null},
+        {"name": "ceo_address_1", "type": ["null","string"], "default":null},
+        {"name": "ceo_address_2", "type": ["null","string"], "default":null},
+        {"name": "ceo_address_city", "type": ["null","string"], "default":null},
+        {"name": "ceo_address_state_county", "type": ["null","string"], "default":null},
+        {"name": "ceo_address_zipcode", "type": ["null","string"], "default":null},
+        {"name": "agent_name", "type": ["null","string"], "default":null},
+        {"name": "agent_address_1", "type": ["null","string"], "default":null},
+        {"name": "agent_address_2", "type": ["null","string"], "default":null},
+        {"name": "agent_address_city", "type": ["null","string"], "default":null},
+        {"name": "agent_address_state_county", "type": ["null","string"], "default":null},
+        {"name": "agent_address_zipcode", "type": ["null","string"], "default":null},
+        {"name": "state_or_foreign_country", "type": ["null","string"], "default":null},
+        {"name": "serialid", "type": ["null","string"], "default":null}
+
+        ]
+}
+

@@ -1,0 +1,48 @@
+{
+    "namespace": "com.richipal.ondeck.schema.avro",
+    "type": "record",
+    "name": "MasterSchema",
+    "fields" : [
+
+        {"name": "tranJulianDate", "type": ["null","string"], "default":null},
+        {"name": "corpNumber", "type": ["null","string"], "default":null},
+        {"name": "incorporationDate", "type": ["null","string"], "default":null},
+        {"name": "corpStatus", "type": ["null","string"], "default":null},
+        {"name": "corpType", "type": ["null","string"], "default":null},
+        {"name": "corpTaxBase", "type": ["null","string"], "default":null},
+        {"name": "corpClassification", "type": ["null","string"], "default":null},
+        {"name": "termExpDate", "type": ["null","string"], "default":null},
+        {"name": "ftbSuspensionStatusCode", "type": ["null","string"], "default":null},
+        {"name": "ftbSuspensionDate", "type": ["null","string"], "default":null},
+        {"name": "soFileNumber", "type": ["null","string"], "default":null},
+        {"name": "soFileDate", "type": ["null","string"], "default":null},
+        {"name": "corpName", "type": ["null","string"], "default":null},
+        {"name": "coName", "type": ["null","string"], "default":null},
+        {"name": "mailAddress1", "type": ["null","string"], "default":null},
+        {"name": "mailAddress2", "type": ["null","string"], "default":null},
+        {"name": "mailAddressCity", "type": ["null","string"], "default":null},
+        {"name": "mailAddressStateCounty", "type": ["null","string"], "default":null},
+        {"name": "mailAddressZipcode", "type": ["null","string"], "default":null},
+        {"name": "ceoName", "type": ["null","string"], "default":null},
+        {"name": "ceoAddress1", "type": ["null","string"], "default":null},
+        {"name": "ceoAddress2", "type": ["null","string"], "default":null},
+        {"name": "ceoAddressCity", "type": ["null","string"], "default":null},
+        {"name": "ceoAddressStateCounty", "type": ["null","string"], "default":null},
+        {"name": "ceoAddressZipcode", "type": ["null","string"], "default":null},
+        {"name": "agentName", "type": ["null","string"], "default":null},
+        {"name": "agentAddress1", "type": ["null","string"], "default":null},
+        {"name": "agentAddress2", "type": ["null","string"], "default":null},
+        {"name": "agentAddressCity", "type": ["null","string"], "default":null},
+        {"name": "agentAddressStateCounty", "type": ["null","string"], "default":null},
+        {"name": "agentAddressZipcode", "type": ["null","string"], "default":null},
+        {"name": "stateOrForeignCountry", "type": ["null","string"], "default":null},
+        {"name": "serialId", "type": ["null","string"], "default":null},
+
+        {"name": "timestamp", "type": ["null","string"], "default":null},
+        {"name": "fileName", "type": ["null","string"], "default":null},
+        {"name": "yyyyMMddHHmmssSSS", "type": ["null","string"], "default":null},
+        {"name": "yyyyMMddHH", "type": ["null","string"], "default":null}
+
+        ]
+}
+

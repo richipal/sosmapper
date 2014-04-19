@@ -1,0 +1,49 @@
+{
+    "namespace": "com.richipal.ondeck.schema.avro",
+    "type": "record",
+    "name": "FLMapping",
+    "fields" : [
+
+        {"name": "cor_number", "type": ["null","string"], "default":null},
+        {"name": "cor_name", "type": ["null","string"], "default":null},
+        {"name": "cor_status", "type": ["null","string"], "default":null},
+        {"name": "cor_filing_type", "type": ["null","string"], "default":null},
+        {"name": "cor_princ_add_1", "type": ["null","string"], "default":null},
+        {"name": "cor_princ_add_2", "type": ["null","string"], "default":null},
+        {"name": "cor_princ_city", "type": ["null","string"], "default":null},
+        {"name": "cor_princ_state", "type": ["null","string"], "default":null},
+        {"name": "bcor_princ_zip", "type": ["null","string"], "default":null},
+        {"name": "cor_princ_country", "type": ["null","string"], "default":null},
+        {"name": "cor_mail_add_1", "type": ["null","string"], "default":null},
+        {"name": "cor_mail_add_2", "type": ["null","string"], "default":null},
+        {"name": "cor_mail_city", "type": ["null","string"], "default":null},
+        {"name": "cor_mail_state", "type": ["null","string"], "default":null},
+        {"name": "cor_mail_zip", "type": ["null","string"], "default":null},
+        {"name": "cor_mail_country", "type": ["null","string"], "default":null},
+        {"name": "cor_file_date", "type": ["null","string"], "default":null},
+        {"name": "cor_fei_number", "type": ["null","string"], "default":null},
+        {"name": "more_than_six_off_flag", "type": ["null","string"], "default":null},
+        {"name": "last_trx_date", "type": ["null","string"], "default":null},
+        {"name": "state_country", "type": ["null","string"], "default":null},
+        {"name": "report_year_1", "type": ["null","string"], "default":null},
+        {"name": "house_flag_1", "type": ["null","string"], "default":null},
+        {"name": "report_date_1", "type": ["null","string"], "default":null},
+        {"name": "report_year_2", "type": ["null","string"], "default":null},
+        {"name": "house_flag_2", "type": ["null","string"], "default":null},
+        {"name": "report_date_2", "type": ["null","string"], "default":null},
+        {"name": "report_year_3", "type": ["null","string"], "default":null},
+        {"name": "house_flag_3", "type": ["null","string"], "default":null},
+        {"name": "report_date_3", "type": ["null","string"], "default":null},
+        {"name": "ra_name", "type": ["null","string"], "default":null},
+        {"name": "ra_name_type", "type": ["null","string"], "default":null},
+        {"name": "ra_add_1", "type": ["null","string"], "default":null},
+        {"name": "ra_city", "type": ["null","string"], "default":null},
+        {"name": "ra_state", "type": ["null","string"], "default":null},
+        {"name": "ra_zip5", "type": ["null","string"], "default":null},
+        {"name": "ra_zip4", "type": ["null","string"], "default":null},
+        {"name": "serialid", "type": ["null","string"], "default":null}
+
+
+        ]
+}
+
