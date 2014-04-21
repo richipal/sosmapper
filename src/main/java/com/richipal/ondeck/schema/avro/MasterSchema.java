@@ -3,10 +3,10 @@
  * 
  * DO NOT EDIT DIRECTLY
  */
-package com.richipal.ondeck.schema.avro;
+package com.richipal.ondeck.schema.avro;  
 @SuppressWarnings("all")
 public class MasterSchema extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"MasterSchema\",\"namespace\":\"com.richipal.ondeck.schema.avro\",\"fields\":[{\"name\":\"tranJulianDate\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"corpNumber\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"incorporationDate\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"corpStatus\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"corpType\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"corpTaxBase\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"corpClassification\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"termExpDate\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"ftbSuspensionStatusCode\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"ftbSuspensionDate\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"soFileNumber\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"soFileDate\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"corpName\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"coName\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"mailAddress1\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"mailAddress2\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"mailAddressCity\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"mailAddressStateCounty\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"mailAddressZipcode\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"ceoName\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"ceoAddress1\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"ceoAddress2\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"ceoAddressCity\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"ceoAddressStateCounty\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"ceoAddressZipcode\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"agentName\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"agentAddress1\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"agentAddress2\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"agentAddressCity\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"agentAddressStateCounty\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"agentAddressZipcode\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"stateOrForeignCountry\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"serialId\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"timestamp\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"fileName\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"yyyyMMddHHmmssSSS\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"yyyyMMddHH\",\"type\":[\"null\",\"string\"],\"default\":null}]}");
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"MasterSchema\",\"namespace\":\"com.richipal.ondeck.schema.avro\",\"fields\":[{\"name\":\"tranJulianDate\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"corpNumber\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"incorporationDate\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"corpStatus\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"corpType\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"corpTaxBase\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"corpClassification\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"termExpDate\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"ftbSuspensionStatusCode\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"ftbSuspensionDate\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"soFileNumber\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"soFileDate\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"corpName\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"coName\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"mailAddress1\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"mailAddress2\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"mailAddressCity\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"mailAddressStateCounty\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"mailAddressZipcode\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"ceoName\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"ceoAddress1\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"ceoAddress2\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"ceoAddressCity\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"ceoAddressStateCounty\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"ceoAddressZipcode\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"agentName\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"agentAddress1\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"agentAddress2\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"agentAddressCity\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"agentAddressStateCounty\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"agentAddressZipcode\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"stateOrForeignCountry\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"serialId\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"timestamp\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"fileName\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"yyyyMMddHHmmssSSS\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"yyyyMMddHH\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"yyyyMM\",\"type\":[\"null\",\"string\"],\"default\":null}]}");
   @Deprecated public java.lang.CharSequence tranJulianDate;
   @Deprecated public java.lang.CharSequence corpNumber;
   @Deprecated public java.lang.CharSequence incorporationDate;
@@ -44,6 +44,7 @@ public class MasterSchema extends org.apache.avro.specific.SpecificRecordBase im
   @Deprecated public java.lang.CharSequence fileName;
   @Deprecated public java.lang.CharSequence yyyyMMddHHmmssSSS;
   @Deprecated public java.lang.CharSequence yyyyMMddHH;
+  @Deprecated public java.lang.CharSequence yyyyMM;
   public org.apache.avro.Schema getSchema() { return SCHEMA$; }
   // Used by DatumWriter.  Applications should not call. 
   public java.lang.Object get(int field$) {
@@ -85,6 +86,7 @@ public class MasterSchema extends org.apache.avro.specific.SpecificRecordBase im
     case 34: return fileName;
     case 35: return yyyyMMddHHmmssSSS;
     case 36: return yyyyMMddHH;
+    case 37: return yyyyMM;
     default: throw new org.apache.avro.AvroRuntimeException("Bad index");
     }
   }
@@ -129,6 +131,7 @@ public class MasterSchema extends org.apache.avro.specific.SpecificRecordBase im
     case 34: fileName = (java.lang.CharSequence)value$; break;
     case 35: yyyyMMddHHmmssSSS = (java.lang.CharSequence)value$; break;
     case 36: yyyyMMddHH = (java.lang.CharSequence)value$; break;
+    case 37: yyyyMM = (java.lang.CharSequence)value$; break;
     default: throw new org.apache.avro.AvroRuntimeException("Bad index");
     }
   }
@@ -688,6 +691,21 @@ public class MasterSchema extends org.apache.avro.specific.SpecificRecordBase im
     this.yyyyMMddHH = value;
   }
 
+  /**
+   * Gets the value of the 'yyyyMM' field.
+   */
+  public java.lang.CharSequence getYyyyMM() {
+    return yyyyMM;
+  }
+
+  /**
+   * Sets the value of the 'yyyyMM' field.
+   * @param value the value to set.
+   */
+  public void setYyyyMM(java.lang.CharSequence value) {
+    this.yyyyMM = value;
+  }
+
   /** Creates a new MasterSchema RecordBuilder */
   public static com.richipal.ondeck.schema.avro.MasterSchema.Builder newBuilder() {
     return new com.richipal.ondeck.schema.avro.MasterSchema.Builder();
@@ -746,6 +764,7 @@ public class MasterSchema extends org.apache.avro.specific.SpecificRecordBase im
     private java.lang.CharSequence fileName;
     private java.lang.CharSequence yyyyMMddHHmmssSSS;
     private java.lang.CharSequence yyyyMMddHH;
+    private java.lang.CharSequence yyyyMM;
 
     /** Creates a new Builder */
     private Builder() {
@@ -907,6 +926,10 @@ public class MasterSchema extends org.apache.avro.specific.SpecificRecordBase im
       if (isValidValue(fields()[36], other.yyyyMMddHH)) {
         this.yyyyMMddHH = (java.lang.CharSequence) data().deepCopy(fields()[36].schema(), other.yyyyMMddHH);
         fieldSetFlags()[36] = true;
+      }
+      if (isValidValue(fields()[37], other.yyyyMM)) {
+        this.yyyyMM = (java.lang.CharSequence) data().deepCopy(fields()[37].schema(), other.yyyyMM);
+        fieldSetFlags()[37] = true;
       }
     }
 
@@ -1835,6 +1858,31 @@ public class MasterSchema extends org.apache.avro.specific.SpecificRecordBase im
       return this;
     }
 
+    /** Gets the value of the 'yyyyMM' field */
+    public java.lang.CharSequence getYyyyMM() {
+      return yyyyMM;
+    }
+    
+    /** Sets the value of the 'yyyyMM' field */
+    public com.richipal.ondeck.schema.avro.MasterSchema.Builder setYyyyMM(java.lang.CharSequence value) {
+      validate(fields()[37], value);
+      this.yyyyMM = value;
+      fieldSetFlags()[37] = true;
+      return this; 
+    }
+    
+    /** Checks whether the 'yyyyMM' field has been set */
+    public boolean hasYyyyMM() {
+      return fieldSetFlags()[37];
+    }
+    
+    /** Clears the value of the 'yyyyMM' field */
+    public com.richipal.ondeck.schema.avro.MasterSchema.Builder clearYyyyMM() {
+      yyyyMM = null;
+      fieldSetFlags()[37] = false;
+      return this;
+    }
+
     @Override
     public MasterSchema build() {
       try {
@@ -1876,6 +1924,7 @@ public class MasterSchema extends org.apache.avro.specific.SpecificRecordBase im
         record.fileName = fieldSetFlags()[34] ? this.fileName : (java.lang.CharSequence) defaultValue(fields()[34]);
         record.yyyyMMddHHmmssSSS = fieldSetFlags()[35] ? this.yyyyMMddHHmmssSSS : (java.lang.CharSequence) defaultValue(fields()[35]);
         record.yyyyMMddHH = fieldSetFlags()[36] ? this.yyyyMMddHH : (java.lang.CharSequence) defaultValue(fields()[36]);
+        record.yyyyMM = fieldSetFlags()[37] ? this.yyyyMM : (java.lang.CharSequence) defaultValue(fields()[37]);
         return record;
       } catch (Exception e) {
         throw new org.apache.avro.AvroRuntimeException(e);

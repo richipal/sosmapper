@@ -101,6 +101,7 @@ public class SOSClient {
             AvroUtils.setDatumAttribute(masterSchema,"timestamp", ""+DateTimeUtils.currentTimeMillis());
             AvroUtils.setDatumAttribute(masterSchema,"yyyyMMddHHmmssSSS", DateTimeFormat.forPattern("yyyy-MM-dd HH:mm:ss:SSS").print(new DateTime()));
             AvroUtils.setDatumAttribute(masterSchema,"yyyyMMddHH", DateTimeFormat.forPattern("yyyyMMddHH").print(new DateTime()));
+            AvroUtils.setDatumAttribute(masterSchema,"yyyyMM", DateTimeFormat.forPattern("yyyyMM").print(new DateTime()));
             AvroUtils.setDatumAttribute(masterSchema,"fileName", fileName);
               System.out.println("Master:-----"+masterSchema.toString());
 //            FileOutputStream outputStream = new FileOutputStream(new File(output));

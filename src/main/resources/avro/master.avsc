@@ -41,7 +41,8 @@
         {"name": "timestamp", "type": ["null","string"], "default":null},
         {"name": "fileName", "type": ["null","string"], "default":null},
         {"name": "yyyyMMddHHmmssSSS", "type": ["null","string"], "default":null},
-        {"name": "yyyyMMddHH", "type": ["null","string"], "default":null}
+        {"name": "yyyyMMddHH", "type": ["null","string"], "default":null},
+        {"name": "yyyyMM", "type": ["null","string"], "default":null}
 
         ]
 }
