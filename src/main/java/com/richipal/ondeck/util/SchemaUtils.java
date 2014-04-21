@@ -13,6 +13,15 @@ import java.util.Set;
  */
 public class SchemaUtils {
 
+    /**
+     *
+     * @param fields
+     * @param row
+     * @return
+     *
+     * Creates a JSON Object form line read from csv file.
+     *
+     */
     public static JSONObject mapField(List<String> fields, Object[] row){
         JSONObject result = new JSONObject();
         int i =0;

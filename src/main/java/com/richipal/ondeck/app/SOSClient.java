@@ -25,6 +25,7 @@ import com.richipal.ondeck.util.*;
 public class SOSClient {
     public static void main(String[] args) throws Exception{
 
+        //Read the command line options
         CommandLine cmdLine = parseArgs(args);
         String path = cmdLine.getOptionValue("file");
         String output = cmdLine.getOptionValue("output");
@@ -36,68 +37,98 @@ public class SOSClient {
         String fileName = StringUtils.substringAfterLast(path, "/");
         File csvFile = new File(path);
 
+
+        /*
+         * This property state_mappings has the state mapping file information
+         * which is mapping between the fields
+         */
         List<String> stateMappings = Configurator.getList("state_mappings");
         List<String> orignalSchema = null;
 
         /**
          * We need to dynamically figure out which file it is and which schema to use
          * The assumption is the files are state names and the schemas are matched to the names in
-         * the properties file. For example the california.csv has a matching property california:fully_qualified_parser_name
+         * the properties file. For example the california.csv incoming file will have a matching property california:camapping.json
+         * where camapping.json has mappings of the fields with Master schema
          *
          */
         SOSParser parser=null;
         for(String mapping: stateMappings){
             String parts[] = mapping.split(":");
+            /**
+             * parts[0] will have the name of state and parts[1] will have the mapping file name
+             */
             if(fileName.startsWith(parts[0])){
                 /**
-                 * Instantiate the parser class dynamically based on file type
-                 *parts[0] will contain the stateName and parts[1] will have parser Class name
+                 * Using Java Reflection dynamically invoke the constructor on SOSParser and set the mapping file
                  */
-                Class<?> clazz = Class.forName("com.richipal.ondeck.parser.SOSParser");
+                Class<?> clazz = SOSParser.class;
                 Constructor<?> constructor = clazz.getConstructor(String.class);
                 parser = (SOSParser) constructor.newInstance(parts[1]);
 
                 //This is schema for csv file header, each state will have its own schema defined in the properties file.
-                orignalSchema = Configurator.getList(parts[0]+"_schema");
+                try{
+                    orignalSchema = Configurator.getList(parts[0]+"_schema");
+                }catch(Exception e){
+                    throw new RuntimeException("Original Schema not found in the properties file, expecting a property name :"+parts[0]+"_schema"
+                    +" in the mappings.properties file with the value of original schema.");
+                }
 
-                break;//once we identified the parser break out of the for loop
+                break;//once we identified the mappings break out of the for loop
             }
         }
 
         /**
-         * Read through the csv file
+         * If mapping files are found then go ahead and read through the csv file
          */
         MappingIterator<Object[]> it = mapper.reader(Object[].class).readValues(csvFile);
         List<String> fields = new ArrayList<String>();
         File outFile =new File(output);
         while (it.hasNext()) {
-            //The first line is header line
+            /**
+             * The first line is header line, which will help in comparing the existing schema
+             * If field names change or new fields are added or fields are taken off
+             * we throw Exception
+             */
             if(it.getCurrentLocation().getLineNr()==1){
                 Object[] row = it.next();
                 for(Object field: row){
                     fields.add((String) field);
                 }
 
+                // We do union and intersection of lists and compare for schema mismatch
                 List<String> union = ListUtils.union(orignalSchema,fields);
                 List<String> intersection = ListUtils.intersection(orignalSchema,fields);
                 union.removeAll(intersection);
 
                 //If Schema not same throw the Exception else continue
                 if(union.size()>0) {
-                    throw new Exception("Schemas differences:"+union.toString());
+                    throw new Exception("There are Schemas differences the field names don't match:"+union.toString());
                 }
 
+                //Check the size of original schema and the new schema If they are different then throw exception
                 if(!((intersection.size()==orignalSchema.size())&&(intersection.size()==fields.size()))) {
-                    throw new Exception("Schemas not same please check the incoming schema");
+                    throw new Exception("Schemas not same please check the incoming csv file schema");
                 }
 
                 continue;//read next line
             }
             Object[] row = it.next();
+
+            /**
+             * If no differences in schema then,create a JSONOject from line read.
+             * This is mapped to the fields read from first line in the csv.
+             */
             JSONObject incomingJSON = SchemaUtils.mapField(fields, row);
-            System.out.println("Incoming:>>"+incomingJSON.toJSONString());
+//            System.out.println("Incoming:>>"+incomingJSON.toJSONString());
+
+            /**
+             * Use the JSON Object created from the csv and create a new MasterSchema object
+             * this uses schema mapping file, If the file is not found it will throw exception.
+             */
             MasterSchema masterSchema = SchemaUtils.mapToMasterSchema(incomingJSON,parser.getSchemaMapping());
 
+            //Here we add some additional fields that might help.
             AvroUtils.setDatumAttribute(masterSchema,"timestamp", ""+DateTimeUtils.currentTimeMillis());
             AvroUtils.setDatumAttribute(masterSchema,"yyyyMMddHHmmssSSS", DateTimeFormat.forPattern("yyyy-MM-dd HH:mm:ss:SSS").print(new DateTime()));
             AvroUtils.setDatumAttribute(masterSchema,"yyyyMMddHH", DateTimeFormat.forPattern("yyyyMMddHH").print(new DateTime()));
@@ -113,6 +144,9 @@ public class SOSClient {
 
 
 
+    /*
+     * Reads the command line options
+     */
     private static CommandLine parseArgs(String[] args) throws org.apache.commons.cli.ParseException {
 
         Options options = new Options();
