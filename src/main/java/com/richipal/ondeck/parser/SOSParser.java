@@ -29,6 +29,7 @@ public class SOSParser {
             jsonObject = (JSONObject) parser.parse(new FileReader(PATH+getMappingFile()));
         } catch (FileNotFoundException e) {
             e.printStackTrace();
+            System.exit(1);
         } catch (IOException e) {
             e.printStackTrace();
         } catch (org.json.simple.parser.ParseException e) {

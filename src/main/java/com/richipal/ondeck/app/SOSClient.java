@@ -14,6 +14,7 @@ import org.joda.time.format.DateTimeFormat;
 import org.json.simple.JSONObject;
 
 import java.io.File;
+import java.io.IOException;
 import java.lang.reflect.Constructor;
 import java.util.*;
 
@@ -36,7 +37,9 @@ public class SOSClient {
         //Get the file name from path
         String fileName = StringUtils.substringAfterLast(path, "/");
         File csvFile = new File(path);
-
+        if(!csvFile.exists()){
+            throw new IOException("File:"+ path+" not found");
+        }
 
         /*
          * This property state_mappings has the state mapping file information
@@ -76,6 +79,12 @@ public class SOSClient {
 
                 break;//once we identified the mappings break out of the for loop
             }
+
+        }
+
+        //If schema not found throw exception
+        if(orignalSchema==null||orignalSchema.size()==0){
+            throw new RuntimeException("Schema definition not found in mappings.properties file, please add it example:- california:camappings.json");
         }
 
         /**

@@ -1,0 +1,11 @@
+{
+    "dos_id_number":"corpNumber",
+    "current_entity_name":"corpName",
+    "current_entity_status":"corpStatus",
+    "entity_type":"corpType",
+    "effective_date":"incorporationDate",
+    "dos_process_address":"mailAddress1",
+    "county":"mailAddressStateCountry",
+    "initial_dos_filing_date":"soFileDate",
+    "serialid":"serialId"
+}
